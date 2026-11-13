@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Gender and Literature</title>
+<title>Gender and Literature Syllabus</title>
+  <style>
+
+/* =========================================
+   GENDER AND LITERATURE
+   COMPLETE RESPONSIVE WEBSITE DESIGN
+   ========================================= */
+
+/* 1. BASIC WEBSITE DESIGN */
+
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #263445;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. MAIN WEBSITE CONTAINER */
+
+body > .week-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border: 1px solid #d6e4f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(30, 60, 90, 0.08);
+}
+
+/* Nested week-section containers */
+
+.week-section .week-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* 3. MAIN HEADING - H1 */
+
+h1 {
+    border: 2px solid #173b70;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* 4. NOTES HEADING - H2 */
+
+h2 {
+    border: 2px solid #3979bd;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* 5. WEEK HEADING - H3 */
+
+h3 {
+    border: 2px solid #6d91b5;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* 6. PART HEADING - H4 */
+
+h4 {
+    color: #173b70;
+    font-size: 22px;
+    line-height: 1.6;
+    padding: 14px 18px;
+    margin: 30px 0 22px;
+    background-color: #eaf1fb;
+    border-left: 6px solid #3979bd;
+    border-bottom: 1px solid #cbdced;
+    border-radius: 7px;
+}
+
+/* 7. NUMBERED TOPIC HEADING - H5 */
+
+h5 {
+    color: #174a7e;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 10px 14px;
+    margin: 25px 0 15px;
+    background-color: #f0f6fd;
+    border-left: 4px solid #5b91c7;
+    border-radius: 5px;
+}
+
+/* 8. SMALL SUBHEADING - H6 */
+
+h6 {
+    color: #285783;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 20px 0 8px;
+    padding: 6px 12px;
+    background-color: #f5f8fc;
+    border-left: 3px solid #8aafd5;
+    border-radius: 4px;
+}
+
+/* 9. PARAGRAPH DESIGN */
+
+p {
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: justify;
+    margin: 12px 0 18px;
+    overflow-wrap: break-word;
+}
+
+/* 10. TEXT EMPHASIS */
+
+b,
+strong {
+    color: #173b70;
+}
+u {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* 11. UNORDERED LIST DESIGN */
+
+ul {
+    padding-left: 35px;
+    margin: 15px 0 22px;
+}
+ul li {
+    padding: 5px 4px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+ul li::marker {
+    color: #3979bd;
+}
+
+/* 12. ORDERED LIST DESIGN */
+
+ol {
+    padding-left: 38px;
+    margin: 15px 0 22px;
+}
+ol li {
+    padding: 5px 4px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+ol li::marker {
+    color: #285783;
+    font-weight: bold;
+}
+
+/* 13. MATCH THE FOLLOWING DESIGN */
+
+.match-section {
+    margin: 30px 0;
+    font-family: Arial, sans-serif;
+}
+.match-section h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    background-color: #eaf1fb;
+    color: #173b70;
+    border-left: 5px solid #3979bd;
+}
+.match-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #cbdced;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.match-column {
+    min-width: 0;
+}
+.match-column + .match-column {
+    border-left: 1px solid #cbdced;
+}
+.match-column h3 {
+    margin: 0;
+    padding: 14px 12px;
+    background-color: #eaf1fb;
+    color: #173b70;
+    border-bottom: 1px solid #cbdced;
+    border-radius: 0;
+    font-size: 18px;
+}
+.match-column ol {
+    margin: 0;
+    padding: 12px 12px 12px 38px;
+}
+.match-column li {
+    padding: 12px 5px;
+    line-height: 1.6;
+    border-bottom: 1px solid #eeeeee;
+    overflow-wrap: anywhere;
+}
+.match-column li:last-child {
+    border-bottom: none;
+}
+
+/* 14. RESPONSIVE TABLE DESIGN */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0 28px;
+    border: 1px solid #d6e4f0;
+    border-radius: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+.table-container table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+.table-container th,
+.table-container td {
+    border: 1px solid #d6e4f0;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.7;
+}
+.table-container th {
+    background-color: #eaf1fb;
+    color: #173b70;
+    font-weight: bold;
+}
+.table-container tbody tr:nth-child(even) {
+    background-color: #f5f9ff;
+}
+.table-container tbody tr:hover {
+    background-color: #edf5ff;
+}
+
+/* 15. HORIZONTAL RULE DESIGN */
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #d6e4f0;
+    margin: 25px 0;
+}
+
+/* =========================================
+   RESPONSIVE WEBSITE DESIGN
+   ========================================= */
+
+/* 16. TABLET DESIGN */
+
+@media screen and (max-width: 900px) {
+
+    body {
+        padding: 15px;
+    }
+    body > .week-section {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 19px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 19px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+/* 17. MOBILE DESIGN */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 8px;
+        font-size: 16px;
+    }
+    body > .week-section {
+        padding: 16px 12px;
+        border-radius: 9px;
+    }
+    h1 {
+        font-size: 25px;
+        padding: 14px 8px;
+    }
+    h2 {
+        font-size: 22px;
+        padding: 10px;
+    }
+    h3 {
+        font-size: 17px;
+        padding: 12px 9px;
+    }
+    h4 {
+        font-size: 19px;
+        padding: 12px;
+        margin: 24px 0 18px;
+    }
+    h5 {
+        font-size: 18px;
+        padding: 9px 10px;
+    }
+    h6 {
+        font-size: 16px;
+        padding: 6px 9px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 10px 0 15px;
+    }
+    ul,
+    ol {
+        padding-left: 28px;
+    }
+    ul li,
+    ol li {
+        font-size: 15px;
+    }
+    .match-section {
+        margin: 22px 0;
+    }
+    .match-section h2 {
+        font-size: 21px;
+    }
+    .match-column h3 {
+        font-size: 15px;
+        padding: 12px 7px;
+    }
+    .match-column ol {
+        padding: 10px 6px 10px 27px;
+    }
+    .match-column li {
+        font-size: 14px;
+        padding: 10px 3px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+    .table-container th,
+    .table-container td {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* 18. SMALL MOBILE DESIGN */
+
+@media screen and (max-width: 380px) {
+    body > .week-section {
+        padding: 12px 9px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 15px;
+    }
+    .match-column h3 {
+        font-size: 14px;
+    }
+    .match-column li {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   END OF GENDER AND LITERATURE CSS
+   ========================================= */
+
+/* =========================================
+   ADDITIONAL PROFESSIONAL DESIGN
+   GENDER AND LITERATURE
+   ========================================= */
+
+/* 1. NAVIGATION BAR */
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px;
+    margin: 20px 0 30px;
+    background-color: #173b70;
+    border-radius: 10px;
+}
+.site-nav a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 9px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+.site-nav a:hover {
+    background-color: #3979bd;
+}
+
+/* 2. BACK TO TOP BUTTON */
+
+.back-to-top {
+    display: inline-block;
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1000;
+    padding: 11px 16px;
+    background-color: #173b70;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+.back-to-top:hover {
+    background-color: #3979bd;
+}
+
+/* 3. DEFINITION BOX */
+
+.definition-box {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background-color: #eef6ff;
+    border-left: 5px solid #3979bd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30, 60, 90, 0.06);
+}
+.definition-box h6 {
+    margin-top: 0;
+    color: #173b70;
+}
+.definition-box p {
+    margin-bottom: 0;
+}
+
+/* 4. IMPORTANT NOTES BOX */
+
+.note-box {
+    margin: 22px 0;
+    padding: 18px 20px;
+    background-color: #fff8e8;
+    border-left: 5px solid #e0a42e;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(100, 80, 30, 0.06);
+}
+.note-box h5 {
+    margin-top: 0;
+    background-color: transparent;
+    border-left: none;
+    padding: 0;
+    color: #80520b;
+}
+.note-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* 5. PRINT-FRIENDLY DESIGN */
+
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 0;
+        font-size: 12pt;
+    }
+    body > .week-section {
+        max-width: 100%;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #000000;
+        background: #ffffff;
+        box-shadow: none;
+        break-after: avoid;
+    }
+    p {
+        color: #000000;
+        font-size: 11pt;
+        line-height: 1.6;
+    }
+    .site-nav,
+    .back-to-top,
+    .no-print {
+        display: none !important;
+    }
+    .definition-box,
+    .note-box {
+        background: #ffffff;
+        box-shadow: none;
+        break-inside: avoid;
+    }
+    .match-box,
+    .table-container {
+        break-inside: avoid;
+    }
+    .table-container {
+        overflow: visible;
+    }
+    .table-container table {
+        min-width: 0;
+    }
+    .table-container th,
+    .table-container td {
+        color: #000000;
+    }
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+    .site-footer {
+        display: none;
+    }
+}
+
+/* 6. FOOTER DESIGN */
+
+.site-footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 24px 15px;
+    text-align: center;
+    background-color: #173b70;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.site-footer p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.site-footer a {
+    color: #d5e8ff;
+    text-decoration: underline;
+}
+
+/* 7. ADDITIONAL RESPONSIVE DESIGN */
+
+@media screen and (max-width: 600px) {
+    .site-nav {
+        gap: 6px;
+        padding: 10px 6px;
+    }
+    .site-nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+    .back-to-top {
+        right: 12px;
+        bottom: 12px;
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+    .definition-box,
+    .note-box {
+        padding: 14px;
+    }
+    .site-footer {
+        padding: 18px 10px;
+    }
+}
+/* Special Border for Main Three Headings */
+
+.main-border {
+    border: 3px solid #315f91;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(30, 60, 90, 0.12);
+    padding: 12px;
+}
+/* =========================================
+   END OF ADDITIONAL DESIGN
+   ========================================= */
+
+  </style>
+  <!-- CSS END -->
+</head>
+<body>
+  <h1>
+    <b><u>Gender and Literature</u></b>
+  </h1>
+
+
+
+
+
